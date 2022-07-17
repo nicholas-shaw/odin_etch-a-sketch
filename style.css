@@ -1,0 +1,139 @@
+:root {
+  --grid-size: 10px;
+}
+
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: linear-gradient(
+    60deg,
+    hsl(240deg 48% 75%) 0%,
+    hsl(256deg 57% 73%) 3%,
+    hsl(272deg 66% 70%) 7%,
+    hsl(289deg 73% 68%) 12%,
+    hsl(305deg 79% 65%) 20%,
+    hsl(321deg 85% 62%) 30%,
+    hsl(337deg 89% 59%) 45%,
+    hsl(353deg 93% 56%) 66%,
+    hsl(10deg 97% 53%) 86%,
+    hsl(26deg 100% 50%) 100%
+  );
+}
+
+h1 {
+  text-align: center;
+  font-size: 8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.4));
+}
+
+h2 {
+  text-align: right;
+}
+
+.banner {
+  position: fixed;
+  white-space: nowrap;
+  top: 20px;
+  right: -220px;
+  rotate: 20deg;
+  background-color: hsl(240deg 48% 75%);
+  padding: 0 15rem;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.sideMenu {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+#app {
+  grid-area: frameApp;
+  display: grid;
+  height: 600px;
+  width: 600px;
+}
+
+.gridRow {
+  background-color: beige;
+  display: grid;
+}
+
+.gridDiv {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.gridDiv:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#frame {
+  display: grid;
+  width: 660px;
+  grid-template-areas:
+    "frameTop frameTop frameTop"
+    "frameLeft frameApp frameRight"
+    "frameBottom frameBottom frameBottom";
+  box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.2);
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.frame {
+  background-color: #ffffff;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#frameTop {
+  grid-area: frameTop;
+  height: 30px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+#frameLeft {
+  width: 30px;
+  grid-area: frameLeft;
+}
+
+#frameRight {
+  width: 30px;
+  grid-area: frameRight;
+}
+
+#frameBottom {
+  height: 30px;
+  grid-area: frameBottom;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

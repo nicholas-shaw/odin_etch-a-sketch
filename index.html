@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Odin Project - Etch-A-Sketch</title>
+  </head>
+  <body>
+    <h1>Etch-A-Sketch</h1>
+    <div class="banner"><h2>For The Odin Project</h2></div>
+    <div class="mainContainer">
+      <div class="sideMenu">
+
+        <div class="settings" >
+            <button class="gridSize" onClick="changeGridSize()">
+                Change grid size
+              </button>
+          <div >
+            <label for="colorPicker">Colour</label>
+          <input
+            type="color"
+            id="colorPicker"
+            name="colorPicker"
+            value="#000000"
+            onChange="changeColor(this.value);"
+          />
+          </div>
+
+          <div>
+            <input type="checkbox" id="shadingCheckbox">Shading</input>
+          </div>
+          <div>
+            <input type="checkbox" id="rainbowCheckbox">Rainbow</input>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="frame">
+        <div class="frame" id="frameTop"></div>
+        <div class="frame" id="frameLeft"></div>
+        <div id="app"></div>
+        <div class="frame" id="frameRight"></div>
+        <div class="frame" id="frameBottom"></div>
+      </div>
+    </div>
+  </body>
+</html>
